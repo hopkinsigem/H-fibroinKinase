@@ -29,6 +29,8 @@ overlaps = augustusgenes_gr.join(extracted_data_gr)
 
 # Convert the result back to a pandas DataFrame
 overlaps_df = overlaps.df
+#Gene = gene areas predicted by Augustus
+overlaps_df.rename(columns={'Start': 'Gene Start', 'End': 'Gene End', 'Start_b': 'Kinase Start', 'End_b': 'Kinase End'}, inplace=True)
 
 print("\nOverlapping Regions DataFrame:")
 print(overlaps_df)
