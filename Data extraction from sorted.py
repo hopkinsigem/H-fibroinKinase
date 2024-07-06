@@ -64,7 +64,7 @@ for key, regions in data_dict.items():
 # Write the extracted data to a TSV file
 with open(output_file_path, 'w', newline='') as file:
     writer = csv.writer(file, delimiter='\t')
-    writer.writerow(["Query", "Chromosome", "Start of Region", "End of Region", "Score"])
+    writer.writerow(["Query", "Chromosome", "Start", "End", "Score"])
     writer.writerows(final_data)
 
 print(f"Extracted data has been saved to {output_file_path}")
